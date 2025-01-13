@@ -21,6 +21,7 @@ const Header = () => {
         <nav className="container mx-auto flex justify-between items-center">
           <div className="text-2xl font-bold text-white"></div>
 
+          {/* Hamburger Menu for Mobile */}
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
@@ -43,10 +44,9 @@ const Header = () => {
             </button>
           </div>
 
+          {/* Menu for Desktop and Tablet */}
           <motion.ul
-            className={`md:flex space-x-6 text-white ${
-              isMenuOpen ? 'flex flex-col' : 'hidden md:flex'
-            }`}
+            className={`md:flex space-x-6 text-white ${isMenuOpen ? 'flex flex-col' : 'hidden md:flex'}`}
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
@@ -93,7 +93,16 @@ const Header = () => {
             </li>
           </motion.ul>
 
+          {/* Enroll Now Button for Desktop */}
           <button className="bg-red-500 text-white px-6 py-2 rounded-full hidden md:inline-block transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-gradient-to-r hover:from-red-200 hover:to-red-600 hover:text-white">
+            Enroll Now
+          </button>
+
+          {/* Mobile View Enroll Now Button */}
+          <button
+            onClick={toggleMenu}
+            className={`bg-red-500 text-white px-6 py-2 rounded-full md:hidden transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-gradient-to-r hover:from-red-200 hover:to-red-600 hover:text-white ${isMenuOpen ? 'block' : 'hidden'}`}
+          >
             Enroll Now
           </button>
         </nav>
