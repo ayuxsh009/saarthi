@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-          <div className=" py-4  bg-gray-50 ">
+          <div className="   bg-gray-50 ">
           <HomePage/>
           </div>
     </>
