@@ -9,103 +9,133 @@ const Header = () => {
   };
 
   return (
-    <header className="flex items-center bg-gray-50 sticky top-0 z-50">
-      <img
-        src=".\image-removebg-preview (5).png"
-        alt="Saarthi"
-        width="120"
-        className="mr-20 ml-10"
-      />
+    <header className="sticky top-0 z-50 bg-white shadow-md">
+      <div className="container mx-auto flex items-center justify-between px-4 py-3">
+        {/* Logo */}
+        <div className="flex items-center">
+          <img
+            src="./image-removebg-preview (5).png"
+            alt="Saarthi"
+            className="h-10 w-auto mr-2"
+          />
+          <span className="text-gray-800 text-lg font-semibold tracking-wide">
+            Saarthi
+          </span>
+        </div>
 
-      <div className="bg-black rounded-full shadow-lg p-2 w-full max-w-6xl">
-        <nav className="container mx-auto flex justify-between items-center">
-          <div className="text-2xl font-bold text-white"></div>
-
-          {/* Hamburger Menu for Mobile */}
-          <div className="md:hidden">
-            <button
-              onClick={toggleMenu}
-              className="text-white focus:outline-none"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-          </div>
-
-          {/* Menu for Desktop and Tablet */}
-          <motion.ul
-            className={`md:flex space-x-6 text-white ${isMenuOpen ? 'flex flex-col' : 'hidden md:flex'}`}
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3 }}
+        {/* Hamburger Menu for Mobile */}
+        <div className="md:hidden">
+          <button
+            onClick={toggleMenu}
+            className="focus:outline-none text-gray-800 hover:scale-110 transition-transform"
           >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex space-x-6 text-gray-800 font-medium text-sm">
+          <li>
+            <a href="#about" className="hover:underline">
+              About Us
+            </a>
+          </li>
+          <li>
+            <a href="#programs" className="hover:underline">
+              Programs
+            </a>
+          </li>
+          <li>
+            <a href="#resources" className="hover:underline">
+              Resources
+            </a>
+          </li>
+          <li>
+            <a href="#how-it-works" className="hover:underline">
+              How it Works
+            </a>
+          </li>
+          <li>
+            <a href="#pricing" className="hover:underline">
+              Pricing
+            </a>
+          </li>
+        </ul>
+
+        {/* Enroll Now Button */}
+        <button className="hidden md:inline-block border border-gray-800 px-4 py-2 rounded text-sm font-medium hover:bg-gray-100 transition">
+          Enroll Now
+        </button>
+
+        {/* Mobile Side Drawer */}
+        <motion.div
+          className={`fixed top-0 left-0 w-64 bg-white text-gray-800 h-full shadow-md transform ${
+            isMenuOpen ? 'translate-x-0' : '-translate-x-full'
+          } transition-transform duration-300 ease-in-out`}
+          initial={{ x: '-100%' }}
+          animate={{ x: isMenuOpen ? 0 : '-100%' }}
+          transition={{ duration: 0.3 }}
+        >
+          <button
+            onClick={toggleMenu}
+            className="absolute top-4 right-4 text-gray-800 focus:outline-none"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+          <ul className="space-y-6 p-6 text-sm font-medium">
             <li>
-              <a
-                href="#about"
-                className="px-4 py-2 rounded-md transition-all duration-300 ease-in-out transform hover:scale-110 hover:bg-gradient-to-r hover:from-indigo-400 hover:to-indigo-800 hover:text-white"
-              >
+              <a href="#about" className="block hover:underline">
                 About Us
               </a>
             </li>
             <li>
-              <a
-                href="#programs"
-                className="px-4 py-2 rounded-md transition-all duration-300 ease-in-out transform hover:scale-110 hover:bg-gradient-to-r hover:from-indigo-400 hover:to-indigo-800 hover:text-white"
-              >
+              <a href="#programs" className="block hover:underline">
                 Programs
               </a>
             </li>
             <li>
-              <a
-                href="#resources"
-                className="px-4 py-2 rounded-md transition-all duration-300 ease-in-out transform hover:scale-110 hover:bg-gradient-to-r hover:from-indigo-400 hover:to-indigo-800 hover:text-white"
-              >
+              <a href="#resources" className="block hover:underline">
                 Resources
               </a>
             </li>
             <li>
-              <a
-                href="#how-it-works"
-                className="px-4 py-2 rounded-md transition-all duration-300 ease-in-out transform hover:scale-110 hover:bg-gradient-to-r hover:from-indigo-400 hover:to-indigo-800 hover:text-white"
-              >
-                How it works
+              <a href="#how-it-works" className="block hover:underline">
+                How it Works
               </a>
             </li>
             <li>
-              <a
-                href="#pricing"
-                className="px-4 py-2 rounded-md transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-gradient-to-r hover:from-indigo-400 hover:to-indigo-800 hover:text-white"
-              >
+              <a href="#pricing" className="block hover:underline">
                 Pricing
               </a>
             </li>
-          </motion.ul>
-
-          {/* Enroll Now Button for Desktop */}
-          <button className="bg-red-500 text-white px-6 py-2 rounded-full hidden md:inline-block transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-gradient-to-r hover:from-red-200 hover:to-red-600 hover:text-white">
-            Enroll Now
-          </button>
-
-          {/* Mobile View Enroll Now Button */}
-          <button
-            onClick={toggleMenu}
-            className={`bg-red-500 text-white px-6 py-2 rounded-full md:hidden transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-gradient-to-r hover:from-red-200 hover:to-red-600 hover:text-white ${isMenuOpen ? 'block' : 'hidden'}`}
-          >
-            Enroll Now
-          </button>
-        </nav>
+          </ul>
+        </motion.div>
       </div>
     </header>
   );
