@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +19,7 @@ const Header = () => {
             alt="Saarthi"
             className="h-10 w-auto mr-2"
           />
-          <span className="text-gray-800 text-lg font-semibold tracking-wide">
+          <span className="text-gray-800 text-lg font-bold tracking-wide font-serif">
             Saarthi
           </span>
         </div>
@@ -49,34 +50,53 @@ const Header = () => {
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6 text-gray-800 font-medium text-sm">
           <li>
-            <a href="#about" className="hover:underline">
+            <Link
+              to="/About"
+              className="relative group text-gray-800 hover:text-blue-500 transition duration-300"
+            >
               About Us
-            </a>
+              <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+            </Link>
           </li>
           <li>
-            <a href="#programs" className="hover:underline">
+            <a
+              href="#programs"
+              className="relative group text-gray-800 hover:text-blue-500 transition duration-300"
+            >
               Programs
+              <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
             </a>
           </li>
           <li>
-            <a href="#resources" className="hover:underline">
+            <a
+              href="#resources"
+              className="relative group text-gray-800 hover:text-blue-500 transition duration-300"
+            >
               Resources
+              <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
             </a>
           </li>
           <li>
-            <a href="#how-it-works" className="hover:underline">
+            <a
+              href="#how-it-works"
+              className="relative group text-gray-800 hover:text-blue-500 transition duration-300"
+            >
               How it Works
+              <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
             </a>
           </li>
           <li>
-            <a href="#pricing" className="hover:underline">
-              Pricing
-            </a>
+            <Link to="/Home"
+              className="relative group text-gray-800 hover:text-blue-500 transition duration-300"
+            >
+              Dashboard
+              <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+            </Link>
           </li>
         </ul>
 
         {/* Enroll Now Button */}
-        <button className="hidden md:inline-block border border-gray-800 px-4 py-2 rounded text-sm font-medium hover:bg-gray-100 transition">
+        <button className="hidden md:inline-block bg-blue-500 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-600 transition-transform transform hover:scale-110">
           Enroll Now
         </button>
 
@@ -110,29 +130,29 @@ const Header = () => {
           </button>
           <ul className="space-y-6 p-6 text-sm font-medium">
             <li>
-              <a href="#about" className="block hover:underline">
+              <Link to="/About" className="block hover:text-blue-500 transform transition-transform duration-200 hover:scale-105">
                 About Us
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#programs" className="block hover:underline">
+              <a href="#programs" className="block hover:text-blue-500 transform transition-transform duration-200 hover:scale-105">
                 Programs
               </a>
             </li>
             <li>
-              <a href="#resources" className="block hover:underline">
+              <a href="#resources" className="block hover:text-blue-500 transform transition-transform duration-200 hover:scale-105">
                 Resources
               </a>
             </li>
             <li>
-              <a href="#how-it-works" className="block hover:underline">
+              <a href="#how-it-works" className="block hover:text-blue-500 transform transition-transform duration-200 hover:scale-105">
                 How it Works
               </a>
             </li>
             <li>
-              <a href="#pricing" className="block hover:underline">
-                Pricing
-              </a>
+              <Link to="/Dashboard" className="block hover:text-blue-500 transform transition-transform duration-200 hover:scale-105">
+                Dashboard
+              </Link>
             </li>
           </ul>
         </motion.div>
