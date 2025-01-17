@@ -3,17 +3,30 @@ import Body from "./Components/Body"
 import Footer from "./Components/Footer"
 import "./index.css"
 import HomePage from "./Components/HomePage"
+import About from "./Components/About"
+import { createBrowserRouter,RouterProvider } from 'react-router-dom';
+
 
 function App() {
-  
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <HomePage />,
+    },
+    {
+      path: '/About',
+      element: <About />,
+    },
+    {
+      path: '/Home',
+      element: <HomePage />,
+    },
+  ]);
 
   return (
-    <>
-          <div className="   bg-gray-50 ">
-          <HomePage/>
-          </div>
-    </>
-  )
+    <RouterProvider router={router} />
+  );
 }
+
 
 export default App
