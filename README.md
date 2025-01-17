@@ -1,33 +1,81 @@
-Saarthi 
-Website Link : https://saarthiedu.netlify.app/
+# Saarthi
 
+A platform dedicated to educating and empowering rural children through engaging and innovative methods.  
 
+🌐 **Website Link**: [https://saarthiedu.netlify.app/](https://saarthiedu.netlify.app/)  
 
-![Front Page](image.png)
-![alt text](image-1.png)
-![alt text](image-2.png)
+---
 
-![About Page](image-3.png)
+## Screenshots  
 
-Clone and Setup the Project
-Step 1: Clone the Repository
-Clone the project from the GitHub repository:
+### Front Page  
+![Front Page](image.png)  
+![Section View](image-1.png)  
+![Interactive Section](image-2.png)  
 
-bash : git clone https://github.com/ayuxsh009/saarthi.git
+### About Page  
+![About Page](image-3.png)  
 
-Step 2: Navigate to the Project Directory
+---
 
+## 🚀 Getting Started  
+
+Follow these steps to set up and run the Saarthi project locally.
+
+### Step 1: Clone the Repository  
+Clone the repository to your local machine:  
+```bash
+git clone https://github.com/ayuxsh009/saarthi.git
+```  
+
+### Step 2: Navigate to the Project Directory  
+```bash
 cd saarthi
+```  
 
-Step 3: Install Dependencies
-Using npm:
+### Step 3: Install Dependencies  
+Install all necessary dependencies to run the project:  
+```bash
+npm install
+```
+Or use the shorthand:  
+```bash
+npm i
+```
 
-npm install or npm i
-
-Step 4: Start the Development Server
-
-Using npm:
-
+### Step 4: Start the Development Server  
+Run the development server to launch the app locally:  
+```bash
 npm run dev
+```  
 
-Visit http://localhost:5173 in your browser to view the app.
+Once started, open your browser and navigate to:  
+**[http://localhost:5173](http://localhost:5173)**  
+
+---
+
+## 🔧 Build for Production  
+To create a production-ready build of the app:  
+```bash
+npm run build
+```  
+
+The production files will be located in the `dist` folder.  
+
+### Preview the Production Build  
+To preview the optimized build locally:  
+```bash
+npm run preview
+```  
+
+---
+
+
+
+
+## 🌟 Features  
+
+- **Interactive Frontend**: Built with React and styled for an engaging user experience.  
+- **Optimized Performance**: Powered by Vite for faster builds and improved performance.  
+- **Focus on Education**: Tailored for rural children with gamified elements.  
+- **Responsive Design**: Fully functional on all devices.  
