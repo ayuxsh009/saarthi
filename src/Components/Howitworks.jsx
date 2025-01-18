@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Header from './Header';
+import Footer from './Footer';
+
 
 const HowitWorks = () => {
   const StepCard = ({ icon, title, description }) => (
@@ -196,6 +198,7 @@ const HowitWorks = () => {
           </div>
         </section>
       </main>
+      <Footer/>
     </div>
   );
 };
