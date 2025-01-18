@@ -59,31 +59,25 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <a
-              href="#programs"
+            <Link to ="/Programs"
               className="relative group text-gray-800 hover:text-blue-500 transition duration-300"
             >
               Programs
               <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#resources"
+            <Link to="/Resources"
               className="relative group text-gray-800 hover:text-blue-500 transition duration-300"
             >
               Resources
               <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#how-it-works"
+            <Link to ="/Howitworks"
               className="relative group text-gray-800 hover:text-blue-500 transition duration-300"
-            >
-              How it Works
-              <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
-            </a>
+            >How it Works<span className="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span></Link>
           </li>
           <li>
             <Link to="/Home"
@@ -135,19 +129,19 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <a href="#programs" className="block hover:text-blue-500 transform transition-transform duration-200 hover:scale-105">
+              <Link to="/Programs" className="block hover:text-blue-500 transform transition-transform duration-200 hover:scale-105">
                 Programs
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#resources" className="block hover:text-blue-500 transform transition-transform duration-200 hover:scale-105">
+              <Link to="#resources" className="block hover:text-blue-500 transform transition-transform duration-200 hover:scale-105">
                 Resources
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#how-it-works" className="block hover:text-blue-500 transform transition-transform duration-200 hover:scale-105">
+              <Link to="#how-it-works" className="block hover:text-blue-500 transform transition-transform duration-200 hover:scale-105">
                 How it Works
-              </a>
+              </Link>
             </li>
             <li>
               <Link to="/Home" className="block hover:text-blue-500 transform transition-transform duration-200 hover:scale-105">

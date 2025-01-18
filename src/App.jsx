@@ -5,7 +5,9 @@ import "./index.css"
 import HomePage from "./Components/HomePage"
 import About from "./Components/About"
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
-
+import Howitworks from "./Components/Howitworks"
+import Resources from "./Components/Resources"
+import Programs from "./Components/Programs"
 
 function App() {
   const router = createBrowserRouter([
@@ -21,6 +23,19 @@ function App() {
       path: '/Home',
       element: <HomePage />,
     },
+    {
+      path:'/Howitworks',
+      element: <Howitworks/>
+    },
+    {
+      path: '/Resources',
+      element: <Resources/>
+    },
+    {
+      path: '/Programs',
+      element: <Programs/>
+    },
+  
   ]);
 
   return (
