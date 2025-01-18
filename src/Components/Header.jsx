@@ -12,17 +12,19 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md">
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
-        {/* Logo */}
-        <div className="flex items-center">
-          <img
-            src="./image-removebg-preview (5).png"
-            alt="Saarthi"
-            className="h-10 w-auto mr-2"
-          />
-          <span className="text-gray-800 text-lg font-bold tracking-wide font-serif">
-            Saarthi
-          </span>
-        </div>
+        {/* Logo with Click Event */}
+        <Link to="/Home">
+          <div className="flex items-center">
+            <img
+              src="./image-removebg-preview (5).png"
+              alt="Saarthi"
+              className="h-10 w-auto mr-2"
+            />
+            <span className="text-gray-800 text-lg font-bold tracking-wide font-serif">
+              Saarthi
+            </span>
+          </div>
+        </Link>
 
         {/* Hamburger Menu for Mobile */}
         <div className="md:hidden">
@@ -59,7 +61,8 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link to ="/Programs"
+            <Link
+              to="/Programs"
               className="relative group text-gray-800 hover:text-blue-500 transition duration-300"
             >
               Programs
@@ -67,7 +70,8 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link to="/Resources"
+            <Link
+              to="/Resources"
               className="relative group text-gray-800 hover:text-blue-500 transition duration-300"
             >
               Resources
@@ -75,12 +79,17 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link to ="/Howitworks"
+            <Link
+              to="/Howitworks"
               className="relative group text-gray-800 hover:text-blue-500 transition duration-300"
-            >How it Works<span className="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span></Link>
+            >
+              How it Works
+              <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+            </Link>
           </li>
           <li>
-            <Link to="/Home"
+            <Link
+              to="/Home"
               className="relative group text-gray-800 hover:text-blue-500 transition duration-300"
             >
               Dashboard
