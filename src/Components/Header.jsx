@@ -150,7 +150,7 @@ const Header = () => {
               </a>
             </li>
             <li>
-              <Link to="/Dashboard" className="block hover:text-blue-500 transform transition-transform duration-200 hover:scale-105">
+              <Link to="/Home" className="block hover:text-blue-500 transform transition-transform duration-200 hover:scale-105">
                 Dashboard
               </Link>
             </li>
