@@ -134,12 +134,12 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to="#resources" className="block hover:text-blue-500 transform transition-transform duration-200 hover:scale-105">
+              <Link to="/Resources" className="block hover:text-blue-500 transform transition-transform duration-200 hover:scale-105">
                 Resources
               </Link>
             </li>
             <li>
-              <Link to="#how-it-works" className="block hover:text-blue-500 transform transition-transform duration-200 hover:scale-105">
+              <Link to="/Howitworks" className="block hover:text-blue-500 transform transition-transform duration-200 hover:scale-105">
                 How it Works
               </Link>
             </li>
