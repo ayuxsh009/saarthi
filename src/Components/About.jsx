@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { div } from 'framer-motion/client';
 import Header from './Header';
+import Footer from './Footer';
+
 
 const About = () => {
   const FeatureCard = ({ icon, title, description }) => (
@@ -139,6 +141,7 @@ const About = () => {
         </div>
       </section>
     </main>
+    <Footer/>
     </div>
   );
 };

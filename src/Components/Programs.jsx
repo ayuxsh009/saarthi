@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Header from './Header';
+import Footer from './Footer';
+
 
 const ProgramCard = ({ icon, title, description }) => (
   <motion.div
@@ -158,6 +160,7 @@ const Program = () => {
           </div>
         </section>
       </main>
+      <Footer/>
     </div>
   );
 };

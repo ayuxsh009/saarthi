@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Header from './Header';
+import Footer from './Footer';
 
 const Resources = () => {
   const ResourceCard = ({ icon, title, description }) => (
@@ -162,6 +163,7 @@ const Resources = () => {
           </div>
         </section>
       </main>
+      <Footer/>
     </div>
   );
 };
